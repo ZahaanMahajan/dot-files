@@ -8,6 +8,7 @@ fi
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 export PATH="$PATH":"$HOME/.pub-cache/bin/"
+export PATH="/Library/Frameworks/Python.framework/Versions/3.12/bin:$PATH"
 export EDITOR=nvim
 
 #ZSH_THEME="robbyrussell"
@@ -20,26 +21,10 @@ COMPLETION_WAITING_DOTS="true"
 plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
-
-# User configuration
-# Example aliases
-
-alias vim=nvim
-alias lc='colorls -lA --sd'
-alias ls='colorls'
-alias lsa='colorls -a'
-alias ide='~/.ide.zsh'
+source ~/.alias
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-function ff() {
-	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")"
-	yazi "$@" --cwd-file="$tmp"
-	if cwd="$(cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
-		cd -- "$cwd"
-	fi
-	rm -f -- "$tmp"
-}
 
 
