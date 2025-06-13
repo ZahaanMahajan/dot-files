@@ -7,9 +7,14 @@ fi
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
-export PATH=$HOME/Tools/flutter/bin:$PATH
+
+export PATH=$HOME/fvm/default/bin:$PATH
 export PATH="$PATH":"$HOME/.pub-cache/bin/"
+export PATH="/Users/zahaan/.shorebird/bin:$PATH"
 export PATH="/Library/Frameworks/Python.framework/Versions/3.12/bin:$PATH"
+
+export NVM_DIR="$HOME/.nvm"
+
 export EDITOR=nvim
 
 #ZSH_THEME="robbyrussell"
@@ -28,8 +33,12 @@ source ~/.alias.zsh
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 
-
-
-export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+## [Completion]
+## Completion scripts setup. Remove the following line to uninstall
+[[ -f /Users/zahaan/.dart-cli-completion/zsh-config.zsh ]] && . /Users/zahaan/.dart-cli-completion/zsh-config.zsh || true
+## [/Completion]
+
+
