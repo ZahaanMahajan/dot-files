@@ -6,7 +6,7 @@ return {
 		"stevearc/dressing.nvim",
 	},
 	opts = {
-		lsp = { settings = { lineLength = 120 } },
+		lsp = { settings = { lineLength = 150 } },
 	},
 	config = true,
 }
