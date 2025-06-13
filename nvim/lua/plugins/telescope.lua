@@ -1,15 +1,13 @@
 return {
   "nvim-telescope/telescope.nvim",
   keys = {
-    -- disable the keymap to grep files
+    -- disable previous <leader> mappings
     { "<leader>/", false },
     { "<leader><space>", false },
-    -- change a keymap
-    { "<leader>ff", "<cmd>Telescope find_files<cr>", desc = "Find Files" },
-    -- add a keymap to browse plugin files
-
+    -- change keymaps to use 'f' as the prefix instead of <leader>
+    { "ff", "<cmd>Telescope find_files<cr>", desc = "Find Files" },
     {
-      "<leader>fp",
+      "fp",
       function()
         require("telescope.builtin").find_files({ cwd = require("lazy.core.config").options.root })
       end,
