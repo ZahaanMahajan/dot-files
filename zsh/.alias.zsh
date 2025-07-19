@@ -3,13 +3,25 @@
 # ─────────────────────────────────────────────
 alias vim='nvim'
 alias ls='colorls'
+alias ide='~/.ide.zsh'
 alias lsa='colorls -a'
 alias lc='colorls -la --sd'
-alias ide='~/.ide.zsh'
 alias reload='source ~/.zshrc'
 alias now='date +"%y-%m-%d %h:%m:%s"'
 alias ports='lsof -i -p -n | grep listen'
+alias sync_config='./.sync_zsh_config.zsh'
 alias brewup='brew update && brew upgrade && brew cleanup'
+
+# ─────────────────────────────────────────────
+# Python Alias
+# ─────────────────────────────────────────────
+alias python='python3'
+
+# ─────────────────────────────────────────────
+# Flutter Alias
+# ─────────────────────────────────────────────
+alias flutter='fvm flutter'
+
 
 # ─────────────────────────────────────────────
 # 🧠 tmux aliases
@@ -38,10 +50,11 @@ alias ga='git add .'
 alias gc='git commit -m'
 alias gpu='git push'
 alias gpl='git pull'
-alias gr='git rebase'
+alias grb='git rebase'
 alias gm='git merge'
-alias gs='git status'
+alias gss='git status'
 alias gl='git log'
+alias glo='git log --oneline'
 
 # remotes
 alias gf='git fetch'
