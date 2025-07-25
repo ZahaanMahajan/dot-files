@@ -4,7 +4,7 @@
 DEST="$HOME/.config/zsh"
 
 # Files to copy
-FILES=(".zshrc" ".alias.zsh" ".ide.zsh")
+FILES=(".zshrc" ".alias.zsh")
 
 # Ensure destination exists
 mkdir -p "$DEST"

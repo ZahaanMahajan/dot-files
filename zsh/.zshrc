@@ -10,7 +10,7 @@ export EDITOR=nvim
 
 plugins=(git)
 
-export PATH="$(brew --prefix python)/libexec/bin:$PATH"
+export PATH="/opt/homebrew/opt/openjdk@21/bin:$PATH"
 export PATH="$HOME/.fvm_flutter/bin:$PATH"
 export PATH="$PYENV_ROOT/bin:$PATH"
 export PYENV_ROOT="$HOME/.pyenv"
@@ -33,4 +33,3 @@ source ~/powerlevel10k/powerlevel10k.zsh-theme
 ## [/Completion]
 
 eval "$(rbenv init - zsh)"
-export PATH="/opt/homebrew/opt/openjdk@21/bin:$PATH"
