@@ -11,6 +11,7 @@ export EDITOR=nvim
 plugins=(git)
 
 export PATH="/opt/homebrew/opt/openjdk@21/bin:$PATH"
+export PATH="$PATH":"$HOME/.pub-cache/bin/"
 export PATH="$HOME/.fvm_flutter/bin:$PATH"
 export PATH="$PYENV_ROOT/bin:$PATH"
 export PYENV_ROOT="$HOME/.pyenv"
